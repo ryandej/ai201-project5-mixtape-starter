@@ -29,6 +29,7 @@ This means playlist order is controlled by the join table's `position` column ra
 ### Pattern Noticed
 
 The app keeps business logic in the `services/` directory. The route layer is responsible for request handling and response formatting, while the service layer performs database queries and application-specific decisions. The tests exercise service functions directly, which means the codebase is organized so core behavior can be verified without manually driving every HTTP endpoint.
+
 ---
 
 ## Root Cause Analysis Entries
