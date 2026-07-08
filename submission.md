@@ -230,6 +230,7 @@ Run this command on the `bugfix/mixtape` branch and include the output or screen
 
 ```bash
 git log --oneline -3
+![git log screenshot](screenshots/git-log.png)
 ```
 
 Current commit history:
