@@ -28,8 +28,7 @@ This means playlist order is controlled by the join table's `position` column ra
 
 ### Pattern Noticed
 
-The app keeps business logic in the `services/` directory and uses tests to exercise those service functions directly. The tests were useful as both reproduction steps and regression checks because each failing test corresponded closely to one reported user-facing issue. I also noticed that the bugs were not random syntax errors; each one came from a small logic choice at a boundary: slicing off the last item, excluding Sunday from consecutive-day logic, or allowing SQL join duplicates through search results.
-
+The app keeps business logic in the `services/` directory. The route layer is responsible for request handling and response formatting, while the service layer performs database queries and application-specific decisions. The tests exercise service functions directly, which means the codebase is organized so core behavior can be verified without manually driving every HTTP endpoint.
 ---
 
 ## Root Cause Analysis Entries
@@ -235,7 +234,7 @@ git log --oneline -3
 Current commit history:
 
 ```text
-e144a36 fix: deduplicate song search results
+e444a36 fix: deduplicate song search results
 b806186 fix: increment listening streak on Sunday
 a570c9e fix: return all playlist songs
 ```
