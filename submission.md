@@ -229,17 +229,20 @@ Result:
 Run this command on the `bugfix/mixtape` branch and include the output or screenshot in the submission:
 
 ```bash
-git log --oneline -3
-![git log screenshot](screenshots/git-log.png)
+git log --oneline
 ```
 
-Current commit history:
+![Git log showing separate bug-fix commits](screenshots/git-log.png)
+
+Current relevant bug-fix commit history:
 
 ```text
-e444a36 fix: deduplicate song search results
+e144a36 fix: deduplicate song search results
 b806186 fix: increment listening streak on Sunday
 a570c9e fix: return all playlist songs
 ```
+
+The screenshot above shows the commit history on the `bugfix/mixtape` branch, including the separate `fix:` commits required for the three completed bug fixes.
 
 ## Submission Notes
 
